@@ -1,0 +1,9 @@
+package br.edu.up.entidades;
+
+public class Produto {
+
+	public String nome;
+	public double preco;
+	
+}
+

@@ -1,0 +1,73 @@
+import java.util.Scanner;
+
+public class Ex1 {
+	
+	public static void main (String[] args) {
+			
+		/*	int[] vetor = new int[5];
+		vetor[0] = 34;
+		vetor[1] = 27;
+		vetor[2] = 3;
+		int valor1 = vetor[1];
+		int valor2 = vetor[2]; */
+		
+		Scanner leitor = new Scanner(System.in);
+	
+		String[] nomes = new String[5];
+		int[] matriculas = new int[5];
+		int[] notas1 = new int[5], notas2 = new int[5];
+		//int[] notaFinal = new int[5];
+		
+		for(int i = 0; i < 5; i++) {
+		
+		System.out.println("Digite o nome do aluno:");
+		nomes[i] = leitor.nextLine();
+		
+		System.out.println("Digite a matrícula do aluno:");
+		matriculas[i] = leitor.nextInt();
+		
+		System.out.println("Digite a primeira nota do aluno:");
+		notas1[i] = leitor.nextInt();
+		
+		System.out.println("Digite a segunda nota do aluno:");
+		notas2[i] =  leitor.nextInt();
+		
+		leitor.nextLine(); //força a quebra de linha a ajuda no loop sem dar b.o 
+		
+		}
+		
+		int contador = 0;
+		int qtde = 5;
+		
+		while(contador < qtde) {
+			
+			
+			System.out.println("Nome do Aluno:"+ nomes[contador]);
+			
+			System.out.println("Matrícula do Aluno:"+ matriculas[contador]);
+			
+			System.out.println("Primeira nota do Aluno:"+ notas1[contador]);
+			
+			System.out.println("Segunda nota do Aluno:"+ notas2[contador]);
+			
+			int notaFinal = (notas1[contador] + notas2[contador]) / 2;
+			
+			System.out.println("Nota final: "+notaFinal);
+			
+			if(notaFinal >= 6) {
+				System.out.println("APROVADO (x) SIM () NÃO ");
+				} else {
+				System.out.println("APROVADO () SIM (x) NÃO ");
+			}
+			
+			System.out.println("--------------");
+			
+			contador++;
+			
+		}		
+		
+		leitor.close();
+		
+	}
+	
+}

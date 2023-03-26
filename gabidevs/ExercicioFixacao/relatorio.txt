@@ -1,0 +1,8 @@
+
+Grupo A: 174
+Grupo B: 184
+Grupo C: 25
+Grupo D: 59
+Grupo E: 42
+Grupo E: 200
+Total de todos os grupos: 684

@@ -1,0 +1,71 @@
+package br.edu.up.util;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Formatter;
+import java.util.Scanner;
+
+import br.edu.up.entidades.Produto;
+
+public class Programa {
+	
+	public static void main(String[] args) throws FileNotFoundException {
+		
+		String arquivoOrigem = "C:\\_src\\gabidevs\\ExercicioFixacao\\grupos-tabulados.txt";
+		
+		File arquivo = new File(arquivoOrigem);
+		Scanner leitor = new Scanner(arquivo);
+		
+	/*	String arquivoDestino ="C:\\_src\\gabidevs\\ExercicioFixacao\\grupos-tabulados.txt"; 
+		Formatter gravador = new Formatter(arquivoDestino);
+		*/
+		//Produto[] vetorDeProdutos = new Produto[]; 
+		int TotalGrupo[] = {0,0,0,0,0,0};
+				
+		
+		while(leitor.hasNextLine()) {
+			String linha = leitor.nextLine();
+			String[] valores = linha.split("/t"); 
+			
+			Produto produto = new Produto();
+	
+			switch(vetor[0]) {
+				
+			case "A":
+				TotalGrupo[0] += Integer.parseInt(vetor[1]);
+			break;
+			
+			case "B":
+				TotalGrupo[1] += Integer.parseInt(vetor[1]);
+			break;
+			
+			}
+			
+			produto.grupo = valores[1];
+			produto.valor = Double.parseDouble(valores[]);
+			
+		}
+		
+		int quantidade = 0;
+		double totalValores = 0;
+		
+		for (int i = 0; i < vetorDeProdutos.length; i++) {
+			
+			Produto produto = vetorDeProdutos[i];
+			
+			System.out.println("Produto");
+			System.out.println("Grupo A: "+produto.grupo);
+			System.out.println("Grupo B: "+produto.valor);
+			System.out.println();		
+	
+			quantidade++;
+			totalValores += produto.valor;
+		}
+		
+		System.out.println("Quantidade dos Produtos: "+quantidade);
+		System.out.println("Total dos Valores: "+totalValores);
+		
+		leitor.close();
+		}
+	}
+

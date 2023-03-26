@@ -1,0 +1,64 @@
+import java.util.Iterator;
+import java.util.Scanner;
+
+import exemplo.ListaDeExercicio;
+
+public class Programa {
+
+	public static void main(String[] args) {
+	//	rodarEx01();
+//para a função funcionar precisar fazer o main chamar ela para que ela funcione;
+		rodarEx02();
+		casting();
+		
+// para n ficar rodando outras funções sem precisar, é só deixar ela comentada	
+		
+
+// funções estativas = pertencem a classe (nomes com as letras maisculas.invoca uma operação ex: Integer.parseInt(); ) 
+		// metodos = pertences ao objeto ( ex: leitor.nextInt(); )
+		
+		
+//nomes com as letras maisculas.invoca uma operação =  função estativa 
+		
+	}
+	
+	public static void rodarEx01() {
+		
+		// função criada
+	}
+	
+	public static void rodarEx02() {
+		
+		
+	}
+	
+	public static void casting() {
+		
+		Scanner leitor = new Scanner(System.in);
+		
+		int qtde = 5;
+		String[] vetor01 = new String[qtde];
+		String[] vetor02 = new String[qtde];
+		
+		for (int i = 0; i < vetor02.length; i++) {
+		
+		System.out.println("Digite um número: ");
+		vetor01[i] = leitor.nextLine();
+		
+		}
+	
+		for (int i = 0; i < vetor02.length; i++) {
+			String vlrVetor01 = vetor01[i];
+			Integer dobro = Integer.parseInt(vlrVetor01) * 2;
+			vetor02[i] = dobro.toString();
+		}
+		 for (int i = 0; i < vetor02.length; i++) {
+			String valor = vetor02[i];
+			System.out.println("Valor em dobro: "+valor);
+		}
+		
+		leitor.close();
+		
+	}
+	
+}

@@ -1,0 +1,34 @@
+classes: primeira maiscula sempre
+
+Função: primeira letras minusculas, se ao declarar a função
+como void não precisar usar return; 
+
+nome(entrada de dados ou não(void)){
+saida ou não(void)
+}
+
+
+uso da palavra new (maior indicativo de que esta criando um objeto)
+
+
+Função estatica (static)
+ex:
+public static double somar() {
+	return;(codigo)
+}
+
+
+Função Método orientação objeto 
+ex: 
+public double somar() {
+	return;(codigo)
+}
+
+
+.length()  (mostra: comprimento, quantidade de caracteres)
+.charAt() pega cada caracter daquele nome (capturo o caracter na posição q ta percorrendo a linha, pega cada caracter)
+String[] vetor = linha.split(" "); //no momento q achar o espaço ele vai quebrar
+
+entradas -> teclado, arquivo(txt,json,xml,pdf,etc), banco, som, video, etc
+processamento -> lógida de programação
+saída -> terminal, arquivo(...), banco, som, vídeo..

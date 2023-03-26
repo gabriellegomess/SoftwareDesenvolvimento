@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class ExercicioFix {
+	
+	public static void main (String[] args) {
+		
+	/*	Scanner leitor = new Scanner(System.in);
+		String nome = leitor.nextLine();
+		int numero = leitor.nextInt(); */
+		
+		
+		Scanner leitor = new Scanner(System.in);
+		Scanner lernota1 = new Scanner(System.in);
+		Scanner lernota2 = new Scanner(System.in);
+		Scanner matri =  new Scanner(System.in);
+		String nome;
+		int matricula;
+		int nota1, nota2;
+		double notaFinal;
+		
+		
+		
+		System.out.println("Digite o nome do aluno:");
+		nome = leitor.nextLine();
+		
+		System.out.println("Digite a matrícula do aluno:");
+		matricula = matri.nextInt();
+		
+		System.out.println("Digite a primeira nota do aluno:");
+		nota1 = lernota1.nextInt();
+		
+		System.out.println("Digite a segunda nota do aluno:");
+		nota2 =  lernota2.nextInt();
+		
+		System.out.println(nome);
+		System.out.println(matricula);
+		System.out.println(nota1);
+		System.out.println(nota2);
+		
+		notaFinal = (nota1 + nota2) / 2;
+		
+		System.out.println(notaFinal);
+		
+		if(notaFinal >= 6) {
+			System.out.println("REPROVADO!");
+		} else {
+			System.out.println("APROVADO");
+		}
+		
+		leitor.close();
+		lernota1.close();
+		lernota2.close();
+		matri.close();
+			
+	}
+
+}
+
+
+/* Criar um programa para processar as seguintes informações de um 
+ * aluno:matrícula, nome , nota1, nota2 e se ele está aprovado ou reprovado;▪ 
+ * Durante a execução calcular a nota final do aluno utilizando a 
+ * seguinteregra: notaFinal = (nota1 + nota2) / 2. Se a nota final for igual ou superior a6 o aluno está aprovado, caso contrário estará reprovado;▪
+ * O programa deverá imprimir o seguinte relatório:Matrícula: xxxxxNome: xxxxx xxxxxAprovado: ( x ) Sim ( ) NãoNota final: xxxxx */
+ 

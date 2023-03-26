@@ -1,0 +1,19 @@
+package br.edu.up;
+import br.edu.up.entidades.Produto;
+
+public class Programa {
+	
+	public static void main(String[] args) {
+		
+		Produto meuProduto = new Produto(); //criando um objeto chamada produto
+		
+		//alta capacidade de agrupar valores distintos
+		//atribuindo ao objetos produto os valores(int, etc) da entidade produto obs: começa a manipular varios tipos e variaveis 
+		meuProduto.codigo = 1;
+		meuProduto.nome = "Computador";
+		meuProduto.marca = "Dell";
+		meuProduto.preco = 3000.00;
+		
+	}
+
+}

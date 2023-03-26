@@ -1,0 +1,7 @@
+package br.edu.up.entidades;
+
+public class Ex01Grupo {
+
+	public double valor;
+	
+}

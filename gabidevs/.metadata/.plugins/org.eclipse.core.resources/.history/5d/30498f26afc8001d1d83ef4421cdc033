@@ -1,0 +1,40 @@
+package br.edu.up.util;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Formatter;
+import java.util.Scanner;
+
+import br.edu.up.entidades.Produto;
+
+public class Programa {
+	
+	public static void main(String[] args) throws FileNotFoundException {
+		
+		String arquivoOrigem = "C:\\_src\\gabidevs\\EntidadesExemplo\\src\\produtos.csv";
+		File arquivo = new File(arquivoOrigem);
+		Scanner leitor = new Scanner(arquivo);
+		
+		String arquivoDestino ="C:\\_src\\gabidevs\\EntidadesExemplo\\src\\relatorio.csv"; 
+		Formatter gravador = new Formatter(arquivoDestino);
+		
+		Produto[] vetorDeProdutos = new Produto[73]; // o 4 ta ali pq sabemos q só tem dois produtos || com esse vetor de produtos vc pode manipular melhor
+		
+		int index = 0;
+		
+		while(leitor.hasNextLine()) {
+			String linha = leitor.nextLine();
+			String[] valores = linha.split(";"); /*vai quebrar a linha em cada ; que tiver */
+			
+			Produto produto = new Produto();
+	
+			//produto.nome = valores[1];
+			//produto.preco = Double.parseDouble(valores[3]);
+			vetorDeProdutos[index] = produto;
+			index++;
+			
+			System.out.println(index);
+		}
+	}
+
+}
