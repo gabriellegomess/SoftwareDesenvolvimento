@@ -1,4 +1,4 @@
-package br.edu.up;
+/*package br.edu.up;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -17,27 +17,31 @@ public class Aluno {
 	/*Após a leitura e o processamento do texto, grave em um arquivo: 
 	 a quantidade de alunos na turma, quantos foram aprovados com nota igual ousuperior a 6,0, quantos foram reprovados, a menor nota da turma, a maiornota e a média geral*/
 	
-	 public static void main(String[] args) throws FileNotFoundException {
+	/* public static void main(String[] args) throws FileNotFoundException {
 		
-		File arquivoOrigem = new File("C:\\_src\\gabidevs\\ExercicioFixacao2\\alunos.csv");
-	
-		Scanner leitor = new Scanner(arquivoOrigem);
+		String arquivoOrigem = "C:\\_src\\gabidevs\\ExercicioFixacao2\\alunos.csv";
 		
-		leitor.nextLine();
+		File arquivo = new File(arquivoOrigem);
+		Scanner leitor = new Scanner(arquivo);
 		
 		Formatter gravador = new Formatter("C:\\_src\\gabidevs\\ExercicioFixacao2\\destino.csv");
-			
-		double maiorNota = 10.0;
-		double menorNota = 0.0;
-		int qntAprovados = 0;
+		
+		int totalAluno[] = {0,0,0};
 		
 		while(leitor.hasNextLine()) {
-			//vetor[0] = matricula
-			//vetor[1] = nome
-			//vetor[2] = nota
+			
 			String linha = leitor.nextLine();
 			String[] vetor = linha.split(";");
 			
+			switch(valores[0]) {
+				
+				
+			
+			}
+			
+			/*Aluno aluno = new Aluno();
+			aluno.matricula = Integer.parseInt(valores[0]);
+			aluno.nome = valores[1];
 			
 		}
 		
@@ -45,3 +49,4 @@ public class Aluno {
 	}
 	
 }
+*/

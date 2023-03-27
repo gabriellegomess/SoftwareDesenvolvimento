@@ -32,9 +32,7 @@ public class Aluno {
 		int qntAprovados = 0;
 		
 		while(leitor.hasNextLine()) {
-			//vetor[0] = matricula
-			//vetor[1] = nome
-			//vetor[2] = nota
+			//vetor[0] = matricula, vetor[1] nome, vetor[2] nota
 			String linha = leitor.nextLine();
 			String[] vetor = linha.split(";");
 			
