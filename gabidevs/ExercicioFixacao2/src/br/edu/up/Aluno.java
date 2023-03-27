@@ -2,7 +2,11 @@ package br.edu.up;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Formatter;
 import java.util.Scanner;
+
+import br.edu.up.entidades.Dados;
+
 
 //import br.edu.up.entidades;
 
@@ -15,20 +19,33 @@ public class Aluno {
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		
-		String arquivoOrigem = "C:\\_src\\gabidevs\\ExercicioFixacao2";
+		String arquivoOrigem = "C:\\_src\\gabidevs\\ExercicioFixacao2\\alunos.csv";
 		
 		File arquivo = new File(arquivoOrigem);
 		Scanner leitor = new Scanner(arquivo);
+		
+		Formatter gravador = new Formatter("C:\\_src\\gabidevs\\ExercicioFixacao2\\destino.csv");
+		
+		int totalAluno[] = {0,0,0};
 		
 		while(leitor.hasNextLine()) {
 			
 			String linha = leitor.nextLine();
 			String[] vetor = linha.split(";");
 			
+			switch(valores[0]) {
+				
+				
 			
+			}
+			
+			/*Aluno aluno = new Aluno();
+			aluno.matricula = Integer.parseInt(valores[0]);
+			aluno.nome = valores[1];*/
 			
 		}
+		
+		gravador.close();
 	}
 	
 }
-
