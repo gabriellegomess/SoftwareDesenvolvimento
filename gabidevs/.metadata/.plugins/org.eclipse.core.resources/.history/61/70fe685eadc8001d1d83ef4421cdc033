@@ -1,8 +1,0 @@
-package br.edu.up.entidades;
-
-public class Ex01Grupo {
-
-	public String grupo;
-	public double valor;
-	
-}

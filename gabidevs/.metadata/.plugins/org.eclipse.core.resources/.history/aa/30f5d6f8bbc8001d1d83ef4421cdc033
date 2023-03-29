@@ -1,9 +1,0 @@
-package br.edu.up;
-
-public class Aluno {
-
-	/*Dado o arquivo de texto alunos.csv, crie um programa para ler todos osregistros de alunos incluindo os atributos matrícula, nome e nota dos alunosem uma classe chamada Aluno.java;*/
-	/*Após a leitura e o processamento do texto, grave em um arquivo: 
-	 a quantidade de alunos na turma, quantos foram aprovados com nota igual ousuperior a 6,0, quantos foram reprovados, a menor nota da turma, a maiornota e a média geral*/
-	
-}

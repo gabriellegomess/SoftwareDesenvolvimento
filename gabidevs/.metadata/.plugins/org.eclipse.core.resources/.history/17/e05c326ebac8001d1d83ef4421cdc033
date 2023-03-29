@@ -1,9 +1,0 @@
-package br.edu.up.entidades;
-
-public class Produto {
-
-	public String grupo;
-	public double valor;
-	
-}
-
