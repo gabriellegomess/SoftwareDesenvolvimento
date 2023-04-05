@@ -1,8 +1,39 @@
 package principal.modelos;
 
-public class Bicicleta {
+public class Bike {
 
 	//Encapsulamento
+	
+	private Roda rodaDianteira;
+	private Roda rodaTrasseira;
+	private Quadro quadro;
+	
+	public void setQuadro(Quadro quadro) {
+		this.quadro = quadro;
+	}
+	
+	public Quadro getQuadro() {
+		return quadro;
+	}
+	
+	public void setRodaDianteira(Roda roda) {
+		this.rodaDianteira = roda;
+	}
+	
+	public Roda getRodaDianteira() {
+		return rodaDianteira;
+
+	}
+	
+	public void setRodaTrasseira(Roda roda) {
+		this.rodaTrasseira = roda;
+	}
+	
+	public Roda getRodaTrasseira() {
+		return rodaTrasseira;
+	}
+	
+
 	private String modelo;
 	private int velocidade;
 	private int pedaladasPorMinuto;
@@ -29,7 +60,6 @@ public class Bicicleta {
 		this.marcha = marcha;
 		}
 	}
-	
 	
 	//Getter (permite pegar, usar)
 	public String getModelo(){

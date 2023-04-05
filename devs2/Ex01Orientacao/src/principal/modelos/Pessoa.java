@@ -7,9 +7,10 @@ public class Pessoa {
 	private double peso;
 	private int idade;
 	
+	                   //nome que voce quer
 	public void setCPF(String CPF) {
 		this.CPF = CPF;
-		//this.nomevariavel = nome da String
+		//this.nomevariavel = nome da "String"
 	}
 	
 	public void setNome(String nome) {
