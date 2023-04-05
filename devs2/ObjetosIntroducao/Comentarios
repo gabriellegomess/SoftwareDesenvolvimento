@@ -5,4 +5,6 @@ Comentários:
 private: ngm pode mexer, nem fazer nada nos atributos (encapsulamento)
 
 set para inserir
-get para pegar
+get para pegar.
+
+Unica classe que tem o metodo main, é o programa(principal)
