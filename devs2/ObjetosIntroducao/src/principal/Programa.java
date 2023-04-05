@@ -5,6 +5,10 @@ public class Programa {
 
 	public static void main(String[] args) {
 		
+		//não é o caso aqui da bike de pegar a roda dianteria ser diferente da trasseira, mas supondo que fosse algo como uma empresa de celular e fosse iphone por exemplo,
+		//como que ele puxaria tipo iphone x, iphone z, com todos eles estando dentor da classe iphone, tendo tamanho, cor, preço
+		//ma hora de definir 
+		//se bem q n precisaria pq vc daria os valores direto no set e get ou n, n sei
 		
 		Quadro quadroMinhaBike = new Quadro();
 		
