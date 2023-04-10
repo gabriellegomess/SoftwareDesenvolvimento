@@ -10,6 +10,9 @@ public class Programa {
 		
 		//nome do objeto(classe) nome que o objeto vei ter
 		
+		
+		// Pessoa eu = new Pessoa("Eu", "12345678", 65); exemplo slide
+		
 		Pessoa eu = new Pessoa();
 		
 		eu.setCPF("458958545");

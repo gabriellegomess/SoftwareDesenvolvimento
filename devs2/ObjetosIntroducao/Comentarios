@@ -11,3 +11,6 @@ Unica classe que tem o metodo main, é o programa(principal)
 
 classes -> substantivos (pessoa, casa, bicicleta.. 
 metodos -> verbos (listar, gerenciar.. 
+
+para gerar tods os set e getters sozinho**
+source --> generate getter e setter --> seleciona todos --> e clica em generate

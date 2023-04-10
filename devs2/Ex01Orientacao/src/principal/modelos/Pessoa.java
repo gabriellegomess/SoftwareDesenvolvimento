@@ -7,6 +7,15 @@ public class Pessoa {
 	private double peso;
 	private int idade;
 	
+	/* exemplo do prof em um dos slides (n aparece a forma de fazer o get usando dois tipos diferentes de variaveis
+	 *  public Pessoa(String nome, String CPF, int idade){
+		this.nome = nome;
+		this.CPF = CPF;
+		this.idade = idade;
+		}
+ */
+
+	
 	                   //nome que voce quer
 	public void setCPF(String CPF) {
 		this.CPF = CPF;

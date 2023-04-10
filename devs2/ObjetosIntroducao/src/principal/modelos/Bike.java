@@ -16,6 +16,8 @@ public class Bike {
 		return quadro;
 	}
 	
+	
+	
 	public void setRodaDianteira(Roda roda) {
 		this.rodaDianteira = roda;
 	}
@@ -25,15 +27,17 @@ public class Bike {
 
 	}
 	
+	
+	
 	public void setRodaTrasseira(Roda roda) {
 		this.rodaTrasseira = roda;
 	}
+	
 	
 	public Roda getRodaTrasseira() {
 		return rodaTrasseira;
 	}
 	
-
 	private String modelo;
 	private int velocidade;
 	private int pedaladasPorMinuto;

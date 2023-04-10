@@ -4,50 +4,66 @@ import principal.modelos.*;
 public class Programa {
 
 	public static void main(String[] args) {
-		
-		//não é o caso aqui da bike de pegar a roda dianteria ser diferente da trasseira, mas supondo que fosse algo como uma empresa de celular e fosse iphone por exemplo,
-		//como que ele puxaria tipo iphone x, iphone z, com todos eles estando dentor da classe iphone, tendo tamanho, cor, preço
-		//ma hora de definir 
-		//se bem q n precisaria pq vc daria os valores direto no set e get ou n, n sei
-		
-		Quadro quadroMinhaBike = new Quadro();
-		
-		quadroMinhaBike.setCor("Azul");
-		quadroMinhaBike.setModelo("Caloi");
-		quadroMinhaBike.setTamanho("Grande");
-		
-		Roda rodaMinhaBike = new Roda();
-		
-		rodaMinhaBike.setCor("Amarelo");
-		rodaMinhaBike.setModelo("Caloi");
-		rodaMinhaBike.setTamanho("Pequeno");
-		
-		System.out.println("Cor do Quadro: "+ quadroMinhaBike.getCor());
-		System.out.println("Modelo do Quadro: "+ quadroMinhaBike.getModelo());
-		System.out.println("Tamanho do Quadro: "+ quadroMinhaBike.getTamanho());
-		System.out.println();
-		
-		System.out.println("Cores das rodas: "+ rodaMinhaBike.getCor());
-		System.out.println("Modelos das rodas: "+ rodaMinhaBike.getModelo());
-		System.out.println("Tamanho das rodas: "+ rodaMinhaBike.getTamanho());
-		System.out.println();
-		
-		System.out.println("=====================================");
-		
-		Bike minhaBike = new Bike();
-		
+			
 		//neste momento, na hora da criação
 		
-		minhaBike.setModelo("Caloi"); 
-		
-		minhaBike.setVelocidade(0);
-		
-		minhaBike.setMarcha(1);
-		
+		Bike minhaBike = new Bike();
+	
+		minhaBike.setModelo("Caloi"); 		
+		minhaBike.setVelocidade(0);	
+		minhaBike.setMarcha(1);	
 		minhaBike.setPedaladasPorMinuto(0);
 		
+		Quadro quadro = new Quadro();
 		
-				
+		quadro.setCor("Azul");
+		quadro.setModelo("Caloi");
+		quadro.setTamanho("Grande");
+		
+		minhaBike.setQuadro(quadro); //!!!!!!!!
+		
+		Roda rodaDianteira = new Roda();
+		
+		rodaDianteira.setCor("Amarelo");
+		rodaDianteira.setModelo("Caloi");
+		rodaDianteira.setTamanho("Pequeno");
+		
+		minhaBike.setRodaDianteira(rodaDianteira); //!!!!!!!!
+		minhaBike.setRodaTrasseira(rodaDianteira); //!!!!!!!!
+		
+		Roda rodaTrasseira = new Roda();
+		
+		rodaTrasseira.setCor("Amarelo");
+		rodaTrasseira.setModelo("Caloi");
+		rodaTrasseira.setTamanho("Pequeno");
+		
+		minhaBike.setRodaDianteira(rodaTrasseira); //!!!!!!!!
+		minhaBike.setRodaTrasseira(rodaTrasseira); //!!!!!!!!
+	
+		
+		System.out.println("================= QUADRO ====================");
+		
+		
+		System.out.println("Cor do Quadro: "+ minhaBike.getQuadro().getCor());
+		System.out.println("Modelo do Quadro: "+ minhaBike.getQuadro().getModelo());
+		System.out.println("Tamanho do Quadro: "+ minhaBike.getQuadro().getTamanho());
+		System.out.println();
+		
+		System.out.println("============== RODAS DIANTERIAS ====================");
+		
+		System.out.println("Cores das rodas dianteiras: "+ minhaBike.getRodaDianteira().getCor());
+		System.out.println("Modelos das rodas dianteiras: "+ minhaBike.getRodaDianteira().getModelo());
+		System.out.println("Tamanho das rodas dianteiras: "+ minhaBike.getRodaDianteira().getTamanho());
+		System.out.println();
+		
+		System.out.println("============== ROTAS TRASSEIRAS ====================");
+		
+		System.out.println("Cores das rodas trasseiras: "+ minhaBike.getRodaTrasseira().getCor());
+		System.out.println("Modelos das rodas trasseiras: "+ minhaBike.getRodaTrasseira().getModelo());
+		System.out.println("Tamanho das rodas trasseiras: "+ minhaBike.getRodaTrasseira().getTamanho());
+		System.out.println();
+		
+		System.out.println("================= BIKE ====================");
 		//Imprimir os dados da Bike
 		System.out.println("Modelo: "+ minhaBike.getModelo());
 		System.out.println("Velocidade: "+ minhaBike.getVelocidade());
