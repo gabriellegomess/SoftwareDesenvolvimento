@@ -18,7 +18,7 @@ public class Programa {
 		
 		//pintando a bike de amarelo 
 		minhaBike.getQuadro().setCor("Amerela"); //alterou a cor do quadro
-	
+	              //get esta sendo usado para pegar o quadro, e o SET para inserir a cor que quer 
 				
 		
 		//neste momento, na hora da criação
