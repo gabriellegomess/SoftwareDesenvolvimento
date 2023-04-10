@@ -5,23 +5,37 @@ public class Programa {
 
 	public static void main(String[] args) {
 			
+		//Quadro quadro = new Quadro("Caloi", "Azul", "Grande");
+		
+		//Roda rodaDianteira = new Roda("Verde", "Caloi", "Medio");
+		
+		//Roda rodaTrasseira = new Roda("Amarela", "Caloi", "Medio");
+		
+		
+		Bike minhaBike = new Bike("Calor", 0, 1,0, new Quadro("Caloi", "Azul", "Grande"), new Roda("Verde", "Caloi", "Medio"), new Roda("Amarela", "Caloi", "Medio"));	
+		//pela ordem do construtor da pra saber qual roda viria primeiro
+		
+		
+		//pintando a bike de amarelo 
+		minhaBike.getQuadro().setCor("Amerela"); //alterou a cor do quadro
+	
+				
+		
 		//neste momento, na hora da criação
 		
-		Bike minhaBike = new Bike();
-	
-		minhaBike.setModelo("Caloi"); 		
+		
+		/* minhaBike.setModelo("Caloi"); 		
 		minhaBike.setVelocidade(0);	
 		minhaBike.setMarcha(1);	
 		minhaBike.setPedaladasPorMinuto(0);
 		
 		Quadro quadro = new Quadro();
 		
-		quadro.setCor("Azul");
+		quadro.setCor("Amarelo");
 		quadro.setModelo("Caloi");
-		quadro.setTamanho("Grande");
-		
-		minhaBike.setQuadro(quadro); //!!!!!!!!
-		
+		quadro.setTamanho("Pequeno");
+		minhaBike.setQuadro(quadro);
+	
 		Roda rodaDianteira = new Roda();
 		
 		rodaDianteira.setCor("Amarelo");
@@ -39,7 +53,7 @@ public class Programa {
 		
 		minhaBike.setRodaDianteira(rodaTrasseira); //!!!!!!!!
 		minhaBike.setRodaTrasseira(rodaTrasseira); //!!!!!!!!
-	
+	*/
 		
 		System.out.println("================= QUADRO ====================");
 		

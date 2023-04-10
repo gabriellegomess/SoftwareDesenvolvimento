@@ -11,7 +11,8 @@ public class Programa {
 		//nome do objeto(classe) nome que o objeto vei ter
 		
 		
-		// Pessoa eu = new Pessoa("Eu", "12345678", 65); exemplo slide
+		//exemplo do prof slides  
+		Pessoa euTeste = new Pessoa("Eu", "12345678", 65); 
 		
 		Pessoa eu = new Pessoa();
 		

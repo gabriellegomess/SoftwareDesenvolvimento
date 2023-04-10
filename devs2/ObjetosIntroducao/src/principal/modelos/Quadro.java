@@ -6,6 +6,15 @@ public class Quadro {
 	private String cor;
 	private String tamanho;
 	
+	//construtor
+	public Quadro(String modelo, String cor, String tamanho) {
+		this.modelo = modelo;
+		this.cor = cor;
+		this.tamanho = tamanho;
+	}
+	
+	
+	
 	public void setModelo(String modelo) {
 		this.modelo = modelo;
 	}

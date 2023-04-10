@@ -8,6 +8,40 @@ public class Bike {
 	private Roda rodaTrasseira;
 	private Quadro quadro;
 	
+	private String modelo;
+	private int velocidade;
+	private int pedaladasPorMinuto;
+	private int marcha;
+	
+	//gerando um construtor (não possui retorno, pq ele sempre retorna uma classe (a q pertence))
+	//construtor possui sempre o mesmo nome da classe
+	//private Bike() {}
+	
+	//recebendo apenas coisas da bike
+	public Bike(String modelo, int velocidade, int pedaladasPorMinuto, int marcha) {
+		this.modelo = modelo;
+		this.velocidade = velocidade;
+		this.pedaladasPorMinuto = pedaladasPorMinuto;
+		this.marcha = marcha;
+	}
+	
+	//a bike pode receber tudo de uma vez
+	public Bike(String modelo, int velocidade, int pedaladasPorMinuto, int marcha,
+			Quadro quadro, Roda rodaDianteira, Roda rodaTrasseira) {
+		this.modelo = modelo;
+		this.velocidade = velocidade;
+		this.pedaladasPorMinuto = pedaladasPorMinuto;
+		this.marcha = marcha;
+		this.quadro = quadro;
+		this.rodaDianteira = rodaDianteira;
+		this.rodaTrasseira = rodaTrasseira;
+	}
+	
+	
+	
+	
+	//setter e getters
+	
 	public void setQuadro(Quadro quadro) {
 		this.quadro = quadro;
 	}
@@ -38,10 +72,6 @@ public class Bike {
 		return rodaTrasseira;
 	}
 	
-	private String modelo;
-	private int velocidade;
-	private int pedaladasPorMinuto;
-	private int marcha;
 	
 	//Setter (permite definir, definir valores dentro da classe)
 	public void setModelo(String modelo) {

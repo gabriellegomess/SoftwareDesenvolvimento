@@ -1,16 +1,29 @@
 Comentários:
 
+
 *Organização 
+
 
 private: ngm pode mexer, nem fazer nada nos atributos (encapsulamento)
 
-set para inserir
+
+set para inserir (pode chamar varias vezes)
 get para pegar.
 
+
 Unica classe que tem o metodo main, é o programa(principal)
+
 
 classes -> substantivos (pessoa, casa, bicicleta.. 
 metodos -> verbos (listar, gerenciar.. 
 
+
 para gerar tods os set e getters sozinho**
 source --> generate getter e setter --> seleciona todos --> e clica em generate
+
+
+gerando um construtor (não possui retorno, pq ele sempre retorna uma classe (a q pertence))
+construtor possui sempre o mesmo nome da classe
+
+para o construtor precisa ter todos os objetos criados antes de vc chamar o principal, por ex, criar a roda, quadro, etc antes de usar
+e o construtor só pode chamar apenas uma unica vez!!
