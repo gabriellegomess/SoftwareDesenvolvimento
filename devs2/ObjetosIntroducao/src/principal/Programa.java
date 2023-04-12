@@ -7,45 +7,53 @@ import java.util.ArrayList;
 import principal.modelos.*;
 
 public class Programa {
-	
+
 	public static void main(String[] args) {
 		
-		Ingrediente molho = new Ingrediente("Molho", "Tomate");
-		Ingrediente queijo = new Ingrediente("Queijo", "Parmessão");
+		Bike bikeNormal = new Bike();
+		BikeDeTrilha bikeTrilha = new BikeDeTrilha();
 		
-		//adc com lista
-		/*
-		 * List<Ingrediente> ingredientes = new ArrayList<Ingrediente>() {
-		 * ingredientes.add(molho); ingredientes.add(queijo); }
-		 */
+		bikeTrilha.setModelo("Monark"); //chamou o modelo q é da bike, mas ele usa no de trilha pq ele herdou
 		
-		
-		Pizza pizzaDeQueijo = new Pizza("Queijo");
-		//adicionando item por item
-		pizzaDeQueijo.adicionar(molho);
-		pizzaDeQueijo.adicionar(queijo);
-		
-		
-		System.out.println("Pizza: "+ pizzaDeQueijo.getNome());
-//for avançado
-			//Classe nome : objeto.get(doq quer)
-		for(Ingrediente ingrediente : pizzaDeQueijo.getIngredientes()){
-			System.out.println("Nome do ingrediente: "+ ingrediente.getNome());
-			System.out.println("Descrição do ingrediente: "+ ingrediente.getDescricao());
-		}
-		
-		
-		System.out.println("===============\n");
-		
-		//for convencional - básico
-		System.out.println("Pizza: "+ pizzaDeQueijo.getNome());
-		for(int i = 0; i < pizzaDeQueijo.getIngredientes().size(); i++) {
-			Ingrediente ingredienteDaLista = pizzaDeQueijo.getIngredientes().get(i);
-			System.out.println("Nome do ingrediente: "+ ingredienteDaLista.getNome());
-			System.out.println("Descrição do ingrediente: "+ ingredienteDaLista.getDescricao());
-		}
-		
+		BikeDePasseio bikePasseio = new BikeDePasseio();
 	}
+	
+	/*
+	 * public static void main(String[] args) {
+	 * 
+	 * Ingrediente molho = new Ingrediente("Molho", "Tomate"); Ingrediente queijo =
+	 * new Ingrediente("Queijo", "Parmessão");
+	 * 
+	 * //adc com lista
+	 * 
+	 * List<Ingrediente> ingredientes = new ArrayList<Ingrediente>() {
+	 * ingredientes.add(molho); ingredientes.add(queijo); }
+	 * 
+	 * 
+	 * 
+	 * Pizza pizzaDeQueijo = new Pizza("Queijo"); //adicionando item por item
+	 * pizzaDeQueijo.adicionar(molho); pizzaDeQueijo.adicionar(queijo);
+	 * 
+	 * 
+	 * System.out.println("Pizza: "+ pizzaDeQueijo.getNome()); //for avançado
+	 * //Classe nome : objeto.get(doq quer) for(Ingrediente ingrediente :
+	 * pizzaDeQueijo.getIngredientes()){ System.out.println("Nome do ingrediente: "+
+	 * ingrediente.getNome()); System.out.println("Descrição do ingrediente: "+
+	 * ingrediente.getDescricao()); }
+	 * 
+	 * 
+	 * System.out.println("===============\n");
+	 * 
+	 * //for convencional - básico System.out.println("Pizza: "+
+	 * pizzaDeQueijo.getNome()); for(int i = 0; i <
+	 * pizzaDeQueijo.getIngredientes().size(); i++) { Ingrediente ingredienteDaLista
+	 * = pizzaDeQueijo.getIngredientes().get(i);
+	 * System.out.println("Nome do ingrediente: "+ ingredienteDaLista.getNome());
+	 * System.out.println("Descrição do ingrediente: "+
+	 * ingredienteDaLista.getDescricao()); }
+	 * 
+	 * }
+	 */
 
 	/*
 	 * public static void main(String[] args) {
