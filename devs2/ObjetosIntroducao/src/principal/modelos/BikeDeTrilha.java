@@ -2,6 +2,10 @@ package principal.modelos;
 
 public class BikeDeTrilha extends Bike {
 	
+	private String farol;
+	
+
+
 	public BikeDeTrilha() {
 		super();
 	
@@ -11,6 +15,14 @@ public class BikeDeTrilha extends Bike {
 			Roda rodaDianteira, Roda rodaTrasseira) {
 		super(modelo, velocidade, pedaladasPorMinuto, marcha, quadro, rodaDianteira, rodaTrasseira);
 		
+	}
+	
+	public String getFarol() {
+		return farol;
+	}
+
+	public void setFarol(String farol) {
+		this.farol = farol;
 	}
 
 }
