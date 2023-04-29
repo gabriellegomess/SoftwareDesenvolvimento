@@ -27,3 +27,10 @@ construtor possui sempre o mesmo nome da classe
 
 para o construtor precisa ter todos os objetos criados antes de vc chamar o principal, por ex, criar a roda, quadro, etc antes de usar
 e o construtor só pode chamar apenas uma unica vez!!
+
+List<Classe> nome no plural(da lista)
+
+herança/oq herda --> extends
+
+é um --> herança
+tem --> associação simples

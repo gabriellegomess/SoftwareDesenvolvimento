@@ -114,5 +114,8 @@ public class Bike {
 		return marcha;
 	}
 	
+	public Bike() {
+		
+	}
 	
 }
