@@ -1,1 +1,7 @@
 Export --> Java --> Jar File
+
+Botão direito em cima da pasta --> Configura --> Convert to maven project
+
+Colar o código antes da build colocando o  <dependencies> </dependencies>
+
+
