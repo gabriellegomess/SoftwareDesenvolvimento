@@ -4,8 +4,12 @@ Botão direito em cima da pasta --> Configura --> Convert to maven project
 
 Colar o código antes da build colocando o  <dependencies> </dependencies>
 
+
+
 INSERT INTO `exemplojdbc`.`pessoas`(`nome`,`cpf`,`peso`) VALUES ("Maria","12654878",55.5);
 
 SELECT `pessoas`.`idPessoa`, `pessoas`.`nome`, `pessoas`.`cpf`, `pessoas`.`peso` FROM `exemplojdbc`.`pessoas`;
 
-SELECT * FROM `exemplojdbc`.`pessoas`
+SELECT * FROM `exemplojdbc`.`pessoas`;
+
+
