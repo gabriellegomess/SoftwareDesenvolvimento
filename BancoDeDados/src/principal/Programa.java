@@ -10,10 +10,25 @@ import java.sql.*;
 
 public class Programa {
 	
+	//se qualquer função tem uma exceção ela deve ser chamada na hora de usar
+	//mas caso vc n queira usar toda vez isso para não ficar feio usa o try catch
 	public static void main(String[] args) throws SQLException {
-			
+		
+		SalvarPessoas("Lucas", "41654", 1.54);
+		ListarPessoas();
+}
+	
+	
+//tratando os erros de exceções	(try catch)	
+	public static void ListarPessoas() {
+		
+		try {
+		
+		//url de conexão
 		String url = "jdbc:mysql://localhost:3306/exemplojdbc";
+		//usuario do banco de dados
 		String usuario = "root";
+		//senha do banco de dados
 		String senha = "positivo";
 			
 		//1. Abrir a conexão com o banco de dados
@@ -26,7 +41,7 @@ public class Programa {
 		ResultSet resultado = comando.executeQuery("select * from pessoas");//pegando os dados do banco
 		
 		//3. Mostrando os dados na tela/Utilizar os dados
-		
+	
 		while(resultado.next()) {
 			int id = resultado.getInt("idPessoa");
 			String nome = resultado.getString("nome");
@@ -43,5 +58,56 @@ public class Programa {
 		
 		comando.close();
 		con.close();
-	}
+		
+		//tratando as exception
+		} catch (Exception erro) {
+			System.out.println("Algo deu errado!");
+			System.out.println(erro);
+		}
+	} 
+	
+	
+	public static void SalvarPessoas(String nome, String cpf, double peso) {
+		
+		try {
+		
+		//url de conexão
+		String url = "jdbc:mysql://localhost:3306/exemplojdbc";
+		//usuario do banco de dados
+		String usuario = "root";
+		//senha do banco de dados
+		String senha = "positivo";
+		
+		
+		String sql = "INSERT INTO `pessoas`(`nome`,`cpf`,`peso`)VALUES(?,?,?)";
+			
+		
+		//1. Abrir a conexão com o banco de dados
+		
+		Connection con = DriverManager.getConnection(url, usuario, senha);
+		
+		
+		
+		//2. Criar o comando e executar a consulta
+		
+		PreparedStatement comando = con.prepareStatement(sql);
+		comando.setString(1, nome);
+		comando.setString(2, cpf);
+		comando.setDouble(3, peso);
+		
+		comando.executeUpdate();		
+		comando.close();
+		con.close();
+		
+		
+		System.out.println("Deu tudo certo!");
+		
+		
+		//tratando as exception caso tenha
+		} catch (Exception erro) {
+			System.out.println("Algo deu errado!");
+			System.out.println(erro);
+		}
+	} 
+	
 }

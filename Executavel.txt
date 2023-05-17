@@ -4,12 +4,33 @@ Botão direito em cima da pasta --> Configura --> Convert to maven project
 
 Colar o código antes da build colocando o  <dependencies> </dependencies>
 
+throws Exception (é uma forma de arrumar os erros só que geral, sem especificar o que pode ser, vai apenas arrumar qualquer exception que de)
 
+TRATANDO AS EXCEPTION
+
+	//se qualquer função tem uma exceção ela deve ser chamada na hora de usar
+	//mas caso vc n queira usar toda vez isso para não ficar feio usa o try catch
+	
+		
+		
+//tratando os erros de exceções		
+		try {
+			
+			ListarPessoas();
+			
+		} catch (Exception e) {
+			System.out.println("Algo deu errado!");
+		}
+		
+	
+TRATANDO AS EXCEÇÕES DIRETO NA FUNÇÃO
 
 INSERT INTO `exemplojdbc`.`pessoas`(`nome`,`cpf`,`peso`) VALUES ("Maria","12654878",55.5);
 
 SELECT `pessoas`.`idPessoa`, `pessoas`.`nome`, `pessoas`.`cpf`, `pessoas`.`peso` FROM `exemplojdbc`.`pessoas`;
 
 SELECT * FROM `exemplojdbc`.`pessoas`;
+
+
 
 
