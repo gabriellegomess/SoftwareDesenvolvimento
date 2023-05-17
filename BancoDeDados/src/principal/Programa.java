@@ -26,6 +26,8 @@ public class Programa {
 	
 	
 //tratando os erros de exceções	(try catch)	
+	
+	
 	public static void ListarPessoas() {
 		
 		try {
@@ -74,6 +76,7 @@ public class Programa {
 	
 	
 	public static void SalvarPessoas(Pessoa pessoa) {
+
 		
 		try {
 		
@@ -115,6 +118,7 @@ public class Programa {
 			System.out.println(erro);
 		}
 	} 
+	
 	
 	public static void AltualizarPessoas(Pessoa pessoa) {
 		
@@ -160,6 +164,7 @@ public class Programa {
 			System.out.println(erro);
 		}
 	}
+	
 	
 	public static void DeletarPessoas(int idPessoa) {
 		
