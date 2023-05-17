@@ -12,10 +12,16 @@ public class Programa {
 	
 	//se qualquer função tem uma exceção ela deve ser chamada na hora de usar
 	//mas caso vc n queira usar toda vez isso para não ficar feio usa o try catch
-	public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) {
 		
-		SalvarPessoas("Lucas", "41654", 1.54);
+		Pessoa salvar = new Pessoa("Mary", "4563456", 85);
+		Pessoa atualizar = new Pessoa(6, "Janne", "87575", 57);
+		
+		SalvarPessoas(salvar);
 		ListarPessoas();
+		AltualizarPessoas(atualizar);
+		DeletarPessoas(5);
+		
 }
 	
 	
@@ -67,7 +73,7 @@ public class Programa {
 	} 
 	
 	
-	public static void SalvarPessoas(String nome, String cpf, double peso) {
+	public static void SalvarPessoas(Pessoa pessoa) {
 		
 		try {
 		
@@ -91,9 +97,9 @@ public class Programa {
 		//2. Criar o comando e executar a consulta
 		
 		PreparedStatement comando = con.prepareStatement(sql);
-		comando.setString(1, nome);
-		comando.setString(2, cpf);
-		comando.setDouble(3, peso);
+		comando.setString(1, pessoa.getNome());
+		comando.setString(2, pessoa.getCpf());
+		comando.setDouble(3, pessoa.getPeso());
 		
 		comando.executeUpdate();		
 		comando.close();
@@ -109,5 +115,95 @@ public class Programa {
 			System.out.println(erro);
 		}
 	} 
+	
+	public static void AltualizarPessoas(Pessoa pessoa) {
+		
+		try {
+		
+		//url de conexão
+		String url = "jdbc:mysql://localhost:3306/exemplojdbc";
+		//usuario do banco de dados
+		String usuario = "root";
+		//senha do banco de dados
+		String senha = "positivo";
+		
+		
+		String sql = "UPDATE pessoas SET `nome` = ?, `cpf` = ?, `peso` = ? WHERE `idPessoa` = ?;";
+			
+		
+		//1. Abrir a conexão com o banco de dados
+		
+		Connection con = DriverManager.getConnection(url, usuario, senha);
+		
+		
+		
+		//2. Criar o comando e executar a consulta
+		
+		PreparedStatement comando = con.prepareStatement(sql);
+		comando.setString(1, pessoa.getNome());
+		comando.setString(2, pessoa.getCpf());
+		comando.setDouble(3, pessoa.getPeso());
+		
+		comando.setInt(4, pessoa.getIdPessoa());
+		
+		comando.executeUpdate();		
+		comando.close();
+		con.close();
+		
+		
+		System.out.println("Deu tudo certo!");
+		
+		
+		//tratando as exception caso tenha
+		} catch (Exception erro) {
+			System.out.println("Algo deu errado!");
+			System.out.println(erro);
+		}
+	}
+	
+	public static void DeletarPessoas(int idPessoa) {
+		
+		try {
+		
+		//url de conexão
+		String url = "jdbc:mysql://localhost:3306/exemplojdbc";
+		//usuario do banco de dados
+		String usuario = "root";
+		//senha do banco de dados
+		String senha = "positivo";
+		
+		
+		String sql = "DELETE FROM pessoas WHERE `idPessoa` = ?;";
+			
+		
+		//1. Abrir a conexão com o banco de dados
+		
+		Connection con = DriverManager.getConnection(url, usuario, senha);
+		
+		
+		
+		//2. Criar o comando e executar a consulta
+		
+		PreparedStatement comando = con.prepareStatement(sql);
+		
+		comando.setInt(1, idPessoa);
+		
+		comando.executeUpdate();		
+		comando.close();
+		con.close();
+		
+		
+		System.out.println("Deu tudo certo!");
+		
+		
+		//tratando as exception caso tenha
+		} catch (Exception erro) {
+			System.out.println("Algo deu errado!");
+			System.out.println(erro);
+		}
+		
+		
+		
+	}
 	
 }
