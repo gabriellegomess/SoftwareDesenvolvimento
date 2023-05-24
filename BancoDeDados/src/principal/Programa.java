@@ -20,7 +20,7 @@ public class Programa {
 		SalvarPessoas(salvar);
 		ListarPessoas();
 		AltualizarPessoas(atualizar);
-		DeletarPessoas(5);
+		DeletarPessoas(8);
 		
 }
 	
