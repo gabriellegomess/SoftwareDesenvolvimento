@@ -1,0 +1,5 @@
+1- baixar o maven e as dependencias (DETALHAR MELHOR)
+2- 
+3-src/META-INF --> persistences (dentro)
+4- colocar os @Entity, @Id, @GeneratedValue( strategy = IDENTIFY
+
