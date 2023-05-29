@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+    <logger name="org.hibernate" level="OFF" />
+    <logger name="ch.qos.logback" level="OFF" />
+
+</configuration>
